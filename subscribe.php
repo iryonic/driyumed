@@ -4,10 +4,22 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *'); // Allow requests from your domain
 
 // Database configuration
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'driyum_newsletter');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+
+
+
+//production
+
+
+// // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'driyum_newsletter');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'u167160735_driyum');
+define('DB_USER', 'u167160735_driyum');
+define('DB_PASS', 'Driyum@123');
+
 
 // Check if it's a POST request
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
