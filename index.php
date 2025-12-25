@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRIYUM | Coming Soon - Premium Plant-Based Snacks</title>
+    <title>DRIYUM | Your New Healthy Habit</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,6 +78,23 @@
             opacity: 0.3;
         }
         
+        /* Vegetable Icons for Tradition Section */
+        .vegetable-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .carrot-bg { background: linear-gradient(135deg, #ff7f50, #ff6347); }
+        .tomato-bg { background: linear-gradient(135deg, #ff4444, #ff0000); }
+        .spinach-bg { background: linear-gradient(135deg, #32cd32, #228b22); }
+        
         /* Floating Animations */
         @keyframes floatApple {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -126,6 +143,12 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        
+        /* Kashmiri Theme */
+        .kashmir-pattern {
+            background-image: radial-gradient(circle at 25% 25%, rgba(24, 205, 117, 0.1) 0%, transparent 55%), 
+                            radial-gradient(circle at 75% 75%, rgba(24, 205, 117, 0.1) 0%, transparent 55%);
+        }
     </style>
 </head>
 <body class="bg-cream text-gray-900 overflow-x-hidden">
@@ -143,7 +166,7 @@
     <!-- Navigation -->
     <nav class="relative z-10 bg-white/80 backdrop-blur-md shadow-sm border-b border-green/20">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" class="logo-font text-3xl text-green">DRIYUM</a>
+            <a href="#" class="logo-font text-3xl text-green"><img src="singlelogo.png" alt="Driyum Logo" width="110"></a>
             <div class="flex items-center space-x-4">
                 <a href="admin/login.php" class="text-gray-700 hover:text-green font-medium transition">
                     <i class="fas fa-lock mr-1"></i> Admin
@@ -158,34 +181,39 @@
         <section class="container mx-auto px-4 py-16 md:py-24">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="inline-block mb-6">
-                    <span class="bg-green text-gray-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
+                    <span class="bg-green text-gray-900 px-4 py-2 rounded-full text-sm md:text-lg font-bold uppercase tracking-wider">
                         Coming Soon
                     </span>
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-gray-900 leading-tight">
-                   YOUR NEW HEALTHY
-                    <span class="text-green block bounce-animation">HABBIT!</span>
+                    YOUR NEW HEALTHY
+                    <span class="text-green block bounce-animation">HABIT!</span>
                 </h1>
                 
                 <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto">
-                    We're crafting something extraordinary! Premium plant-based snacks that are better for you and tastier than ever.
+                    Authentic Kashmiri dehydrated snacks - preserving summer's bounty for year-round nourishment. Pure fruits & vegetables, nothing else.
                 </p>
                 
-                <div class="flex items-center justify-center space-x-4 mb-16">
+                <div class="flex flex-wrap items-center justify-center gap-6 mb-16">
+                    <div class="flex items-center">
+                        <i class="fas fa-mountain text-green-600 text-2xl mr-2"></i>
+                        <span class="font-semibold">From Kashmir Valley</span>
+                    </div>
+                    <div class="w-2 h-2 bg-green rounded-full"></div>
+                    <div class="flex items-center">
+                        <i class="fas fa-sun text-yellow-500 text-2xl mr-2"></i>
+                        <span class="font-semibold">Sun-Dried Tradition</span>
+                    </div>
+                    <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
                         <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
-                        <span class="font-semibold">100% Plant-Based</span>
+                        <span class="font-semibold">100% Natural</span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
-                        <i class="fas fa-heart text-red-400 text-2xl mr-2"></i>
-                        <span class="font-semibold">Healthy & Delicious</span>
-                    </div>
-                    <div class="w-2 h-2 bg-green rounded-full"></div>
-                    <div class="flex items-center">
-                        <i class="fas fa-recycle text-blue-400 text-2xl mr-2"></i>
-                        <span class="font-semibold">Eco-Friendly</span>
+                        <i class="fas fa-rupee-sign text-green-700 text-2xl mr-2"></i>
+                        <span class="font-semibold">Affordable Health</span>
                     </div>
                 </div>
             </div>
@@ -204,7 +232,7 @@
                                 Be The First To Know!
                             </h2>
                             <p class="text-gray-600 text-lg">
-                                Join our exclusive newsletter and get early access, special offers, and a surprise gift when we launch!
+                              Join our exclusive newsletter and get early access, special offers, and a surprise gift when we launch!
                             </p>
                         </div>
                         
@@ -229,11 +257,11 @@
                                 class="w-full bg-green hover:bg-green-600 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg  flex items-center justify-center"
                             >
                                 <i class="fas fa-gift mr-3"></i>
-                                <span>Join to get Notified</span>
+                                <span>Join To Get Notified</span>
                             </button>
                             
                             <p class="text-center text-gray-500 text-sm mt-4">
-                                    We Respect Your Privacy <br> No spam, ever.
+                                We Respect Your Privacy • No spam, ever.
                             </p>
                         </form>
                         
@@ -242,23 +270,23 @@
                             <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
                                     <div class="text-3xl font-bold text-green" id="subscriberCount">
-                                         <?php
-                if ($conn) {
-                    $result = $conn->query("SELECT COUNT(*) as today FROM subscribers WHERE DATE(subscribed_at) = CURDATE() AND status = 'active'");
-                    $today = $result->fetch_assoc()['today'] ?? 0;
-                    echo '<div class="card-value">' . $today . '</div>';
-                } 
-                ?>
+                                        <?php
+                                        if ($conn) {
+                                            $result = $conn->query("SELECT COUNT(*) as today FROM subscribers WHERE DATE(subscribed_at) = CURDATE() AND status = 'active'");
+                                            $today = $result->fetch_assoc()['today'] ?? 0;
+                                            echo '<div class="card-value">' . $today . '</div>';
+                                        } 
+                                        ?>
                                     </div>
-                                    <div class="text-gray-600 text-sm">Already Joined</div>
+                                    <div class="text-gray-600 text-sm">Joined Today</div>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green" id="daysLeft">00</div>
-                                    <div class="text-gray-600 text-sm">Days To Launch</div>
+                                    <div class="text-3xl font-bold text-green" id="daysLeft">Soon</div>
+                                    <div class="text-gray-600 text-sm">Launching</div>
                                 </div>
                                 <div>
                                     <div class="text-3xl font-bold text-green" id="earlyAccess">50%</div>
-                                    <div class="text-gray-600 text-sm">Early Access Spots</div>
+                                    <div class="text-gray-600 text-sm">Early Access Left</div>
                                 </div>
                             </div>
                         </div>
@@ -267,30 +295,30 @@
             </div>
         </section>
 
-        <!-- About Us Section -->
+        <!-- Our Story Section -->
         <section class="container mx-auto px-4 py-16">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Our <span class="text-green">Story</span>
+                        Our <span class="text-green">Journey</span>
                     </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Born from a passion for delicious, healthy snacks and a commitment to our planet.
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        Our whole journey started with a simple frustration: why were all the truly healthy snacks so expensive, while the cheap ones were loaded with processed ingredients? It felt like we were filling our bodies with chemical experiments rather than enjoying a snack. We realized the market was missing something authentic and affordable.
                     </p>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="space-y-8">
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
                                 <div class="w-12 h-12 rounded-xl bg-green/20 flex items-center justify-center">
-                                    <i class="fas fa-seedling text-green text-xl"></i>
+                                    <i class="fas fa-lightbulb text-green text-xl"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Fruits-Powered Goodness</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">The Revelation</h3>
                                 <p class="text-gray-600">
-                                    We believe snacks should nourish your body while delighting your taste buds. Every ingredient is carefully selected for both flavor and nutrition.
+                                    We took matters into our own hands, deciding to create the perfect alternative. The solution was surprisingly simple: select the best fruits and vegetables, and gently dehydrate them. That's it!
                                 </p>
                             </div>
                         </div>
@@ -298,13 +326,13 @@
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
                                 <div class="w-12 h-12 rounded-xl bg-green/20 flex items-center justify-center">
-                                    <i class="fas fa-globe-americas text-green text-xl"></i>
+                                    <i class="fas fa-apple-alt text-green text-xl"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Sustainable from Start to Finish</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Simple & Pure</h3>
                                 <p class="text-gray-600">
-                                    From eco-friendly packaging to responsible sourcing, we're committed to minimizing our environmental footprint at every step.
+                                    We simply select the best fruit and gently dehydrate it. This pack is proof that you don't need processed ingredients or sky-high prices to enjoy a clean, delicious, and nutritious snack.
                                 </p>
                             </div>
                         </div>
@@ -312,27 +340,32 @@
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
                                 <div class="w-12 h-12 rounded-xl bg-green/20 flex items-center justify-center">
-                                    <i class="fas fa-heart text-green text-xl"></i>
+                                    <i class="fas fa-utensils text-green text-xl"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Crafted with Love</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Rediscovering Snacking</h3>
                                 <p class="text-gray-600">
-                                    Each recipe is perfected through countless trials, ensuring every crunch delivers maximum flavor and satisfaction.
+                                    Welcome to the way snacking was always meant to be - pure, nourishing, and accessible to everyone, without compromising on quality or breaking the bank.
                                 </p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="relative">
-                        <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-3xl p-8 card-shadow">
+                        <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-3xl p-8 shadow-xl">
                             <div class="relative">
                                 <div class="text-center">
-                                    <div class="text-8xl mb-4">🌱</div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                                    <p class="text-gray-700 text-lg italic">
-                                        "To revolutionize snacking by creating irresistibly delicious plant-based treats that are good for you and kind to our planet."
+                                    <div class="text-6xl mb-4">🌄</div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Kashmiri Heritage</h3>
+                                    <p class="text-gray-700 text-lg">
+                                        Traditionally in Kashmir, vegetables were dehydrated under the summer sun so they could be preserved for long, harsh winters when fresh food was scarce. This practice allowed families to enjoy the taste and nutrition of summer even during winter.
                                     </p>
+                                    <div class="mt-6">
+                                        <p class="text-gray-700 font-medium">
+                                            At DRIYUM, we revive this age-old tradition using modern techniques, preserving vegetables while retaining their flavour, nutrition, and convenience.
+                                        </p>
+                                    </div>
                                     <div class="mt-6 flex items-center justify-center space-x-2">
                                         <div class="w-3 h-3 bg-green rounded-full"></div>
                                         <div class="w-3 h-3 bg-green rounded-full animate-pulse"></div>
@@ -346,48 +379,204 @@
             </div>
         </section>
 
-        <!-- Countdown Timer -->
-        <!-- <section class="container mx-auto px-4 py-12">
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-gradient-to-r from-green-400 to-green-300 rounded-3xl p-8 text-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Launching In</h3>
-                    <div class="grid grid-cols-4 gap-4">
-                        <div class="bg-white/90 rounded-xl p-4">
-                            <div class="text-4xl font-bold text-gray-900" id="countdown-days">00</div>
-                            <div class="text-gray-600 text-sm">Days</div>
+        <!-- Mission & Vision Section -->
+        <section class="container mx-auto px-4 py-16 kashmir-pattern">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Mission Card -->
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-green/20">
+                        <div class="p-8 md:p-10">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-bullseye text-3xl text-green"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                                <p class="text-gray-700 text-xl font-medium mb-6">
+                                    To make healthy snacking affordable, accessible, and convenient for everyone.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green mt-1"></i>
+                                    <p class="text-gray-600">Break the price barrier of healthy snacks</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green mt-1"></i>
+                                    <p class="text-gray-600">Make clean eating accessible to all income levels</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green mt-1"></i>
+                                    <p class="text-gray-600">Provide convenience without compromising quality</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/90 rounded-xl p-4">
-                            <div class="text-4xl font-bold text-gray-900" id="countdown-hours">00</div>
-                            <div class="text-gray-600 text-sm">Hours</div>
+                    </div>
+                    
+                    <!-- Vision Card -->
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-green/20">
+                        <div class="p-8 md:p-10">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-eye text-3xl text-green"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                                <p class="text-gray-700 text-xl font-medium mb-6">
+                                    To build Driyum into one of India's leading healthy snacking brands, starting from Kashmir and reaching across the country.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-star text-green mt-1"></i>
+                                    <p class="text-gray-600">Promote healthier eating habits nationwide</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-star text-green mt-1"></i>
+                                    <p class="text-gray-600">Replace unhealthy packaged snacks with natural alternatives</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-star text-green mt-1"></i>
+                                    <p class="text-gray-600">Serve trekkers, fitness enthusiasts, athletes, and health-conscious families</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/90 rounded-xl p-4">
-                            <div class="text-4xl font-bold text-gray-900" id="countdown-minutes">00</div>
-                            <div class="text-gray-600 text-sm">Minutes</div>
+                    </div>
+                </div>
+                
+                <!-- Brand Promise -->
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">What DRIYUM Stands For</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-green/10 rounded-2xl p-6">
+                            <div class="w-12 h-12 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bolt text-xl text-green"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Clean Energy</h4>
+                            <p class="text-gray-600">Natural, sustained energy from real ingredients</p>
                         </div>
-                        <div class="bg-white/90 rounded-xl p-4">
-                            <div class="text-4xl font-bold text-gray-900" id="countdown-seconds">00</div>
-                            <div class="text-gray-600 text-sm">Seconds</div>
+                        <div class="bg-green/10 rounded-2xl p-6">
+                            <div class="w-12 h-12 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-seedling text-xl text-green"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Real Ingredients</h4>
+                            <p class="text-gray-600">Only what nature intended, nothing artificial</p>
+                        </div>
+                        <div class="bg-green/10 rounded-2xl p-6">
+                            <div class="w-12 h-12 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-brain text-xl text-green"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Smart Snacking</h4>
+                            <p class="text-gray-600">Nourishing choices for every moment of your day</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+
+        <!-- Traditional Vegetables Section -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Kashmiri <span class="text-green">Dehydration Tradition</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        For generations, Kashmiri families have preserved summer's abundance through natural sun dehydration. We honor this wisdom with modern precision.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="vegetable-icon carrot-bg">
+                            <i class="fas fa-carrot text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sun-Preserved</h3>
+                        <p class="text-gray-600">Natural sun drying preserves nutrients without artificial preservatives</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="vegetable-icon tomato-bg">
+                            <i class="fas fa-pepper-hot text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Year-Round Nutrition</h3>
+                        <p class="text-gray-600">Enjoy summer's nutrition even during harsh winter months</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="vegetable-icon spinach-bg">
+                            <i class="fas fa-leaf text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Zero Waste</h3>
+                        <p class="text-gray-600">Preserving abundance, reducing food waste through traditional wisdom</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        For <span class="text-green">Everyone Who Snacks</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        DRIYUM is crafted for every age group and lifestyle, from busy professionals to active adventurers.
+                    </p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
+                        <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hiking text-green text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Trekkers & Adventurers</h4>
+                        <p class="text-gray-600 text-sm">Lightweight, nutritious fuel for the trail</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
+                        <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dumbbell text-green text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Fitness Enthusiasts</h4>
+                        <p class="text-gray-600 text-sm">Pre & post-workout natural energy</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
+                        <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-running text-green text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Athletes</h4>
+                        <p class="text-gray-600 text-sm">Clean nutrition for peak performance</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
+                        <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-green text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Health-Conscious Families</h4>
+                        <p class="text-gray-600 text-sm">Wholesome snacks everyone can enjoy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="relative z-10 bg-gray-900 text-white pt-12 pb-8">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
-                <h3 class="logo-font text-2xl text-beiges mb-4 flex justify-center items-center gap-2"><img src="logo.png" alt="" width="50"> DRIYUM</h3>
-                <p class="text-gray-400 mb-6">Premium plant-based snacks coming soon to revolutionize your snacking experience.</p>
+                <h3 class="logo-font text-2xl text-beiges mb-4 flex justify-center items-center gap-2"><img src="singlelogo.png" alt="DRIYUM Logo" width="100"></h3>
+                <p class="text-gray-400 mb-6 text-lg">Your new healthy habit.</p>
                 <div class="flex justify-center space-x-4">
-                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-green-600 transition">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-green-600 transition">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-green-600 transition">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -396,11 +585,13 @@
             <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-center items-center">
                     <div class="text-gray-500 text-sm mb-4 md:mb-0">
-                        © <?php
-    echo date('Y');
-                        ?> DRIYUM. All rights reserved.
+                        © <?php echo date('Y'); ?> DRIYUM. All rights reserved 
+                        
+                        | Developing by <a href="https://irfanmanzoor.in">Irfan Manzoor</a>
                     </div>
-                  
+                     
+                    
+                    
                 </div>
             </div>
         </div>
@@ -494,8 +685,7 @@
         // Countdown Timer
         function updateCountdown() {
             // Set launch date (30 days from now)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 30);
+          
             
             const now = new Date();
             const timeRemaining = launchDate - now;
@@ -506,11 +696,6 @@
                 const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
                 
-                document.getElementById('countdown-days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
-                
                 // Update days left in stats
                 document.getElementById('daysLeft').textContent = days.toString().padStart(2, '0');
             }
@@ -520,25 +705,9 @@
         updateCountdown();
         setInterval(updateCountdown, 1000);
         
-        // Update subscriber count (fetch from backend)
-        async function updateSubscriberCount() {
-            try {
-                // In a real implementation, you would fetch this from your backend
-                // For now, we'll simulate with a random number
-                const fakeCount = Math.floor(Math.random() * 100) + 50;
-                document.getElementById('subscriberCount').textContent = fakeCount;
-                
-                // Update early access percentage
-                const percentage = Math.max(10, 100 - Math.floor(fakeCount / 5));
-                document.getElementById('earlyAccess').textContent = percentage + '%';
-            } catch (error) {
-                console.error('Error fetching subscriber count:', error);
-            }
-        }
-        
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            updateSubscriberCount();
+            updateCountdown();
             
             // Add some interactive effects
             const fruits = document.querySelectorAll('.floating-fruit');
@@ -551,6 +720,19 @@
                 fruit.addEventListener('mouseleave', function() {
                     this.style.transform = 'scale(1)';
                     this.style.opacity = '0.7';
+                });
+            });
+            
+            // Add Kashmiri theme animation to mission/vision cards
+            const cards = document.querySelectorAll('.bg-white.rounded-3xl');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
                 });
             });
         });
@@ -567,4 +749,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
