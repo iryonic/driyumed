@@ -191,9 +191,7 @@
                     <span class="text-green block bounce-animation">HABIT!</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto">
-                    Authentic Kashmiri dehydrated snacks - preserving summer's bounty for year-round nourishment. Pure fruits & vegetables, nothing else.
-                </p>
+               
                 
                 <div class="flex flex-wrap items-center justify-center gap-6 mb-16">
                     <div class="flex items-center">
@@ -201,10 +199,7 @@
                         <span class="font-semibold">From Kashmir Valley</span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
-                    <div class="flex items-center">
-                        <i class="fas fa-sun text-yellow-500 text-2xl mr-2"></i>
-                        <span class="font-semibold">Sun-Dried Tradition</span>
-                    </div>
+                    
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
                         <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
@@ -323,19 +318,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-green/20 flex items-center justify-center">
-                                    <i class="fas fa-apple-alt text-green text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Simple & Pure</h3>
-                                <p class="text-gray-600">
-                                    We simply select the best fruit and gently dehydrate it. This pack is proof that you don't need processed ingredients or sky-high prices to enjoy a clean, delicious, and nutritious snack.
-                                </p>
-                            </div>
-                        </div>
+                     
                         
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
@@ -353,9 +336,9 @@
                     </div>
                     
                     <div class="relative">
-                        <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-3xl p-8 shadow-xl">
+                        <!-- <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-3xl p-8 shadow-xl">
                             <div class="relative">
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <div class="text-6xl mb-4">🌄</div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Kashmiri Heritage</h3>
                                     <p class="text-gray-700 text-lg">
@@ -371,9 +354,9 @@
                                         <div class="w-3 h-3 bg-green rounded-full animate-pulse"></div>
                                         <div class="w-3 h-3 bg-green rounded-full"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -482,7 +465,7 @@
                         Kashmiri <span class="text-green">Dehydration Tradition</span>
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        For generations, Kashmiri families have preserved summer's abundance through natural sun dehydration. We honor this wisdom with modern precision.
+                        For generations, Kashmiri families have preserved summer's abundance th dehydration. honor this wisdom with modern precision.
                     </p>
                 </div>
                 
@@ -491,8 +474,8 @@
                         <div class="vegetable-icon carrot-bg">
                             <i class="fas fa-carrot text-white"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sun-Preserved</h3>
-                        <p class="text-gray-600">Natural sun drying preserves nutrients without artificial preservatives</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Dry-Preserved</h3>
+                        <p class="text-gray-600"> drying preserves nutrients without  need of artificial preservatives</p>
                     </div>
                     
                     <div class="text-center">
