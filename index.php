@@ -394,7 +394,7 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-center items-center">
                     <div class="text-gray-500 text-sm mb-4 md:mb-0">
                         © <?php
     echo date('Y');
