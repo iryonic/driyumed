@@ -381,13 +381,13 @@
                 <h3 class="logo-font text-2xl text-beiges mb-4 flex justify-center items-center gap-2"><img src="logo.png" alt="" width="50"> DRIYUM</h3>
                 <p class="text-gray-400 mb-6">Premium plant-based snacks coming soon to revolutionize your snacking experience.</p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
+                    <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-gray-900 transition">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
