@@ -3,10 +3,10 @@
 session_start();
 
 // Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'driyum_newsletter');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'driyum_newsletter');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
 
 // Admin Credentials
 define('ADMIN_USERNAME', 'admin');
@@ -19,10 +19,10 @@ define('SITE_NAME', 'DRIYUM Healthy Snacks');
 
 
 // Production Database Configuration
-//  define('DB_HOST', 'localhost');
-// define('DB_NAME', 'u167160735_driyum');
-// define('DB_USER', 'u167160735_driyum');
-// define('DB_PASS', 'Driyum@123');
+ define('DB_HOST', 'localhost');
+define('DB_NAME', 'u167160735_driyum');
+define('DB_USER', 'u167160735_driyum');
+define('DB_PASS', 'Driyum@123');
 
 
 
