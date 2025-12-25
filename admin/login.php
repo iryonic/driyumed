@@ -31,227 +31,251 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login | DRIYUM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --deep-forest: #064E3B;
-            --dark-emerald: #022C22;
-            --fresh-leaf: #22C55E;
-            --soft-cream: #ECFDF5;
-            --gold-accent: #D4AF37;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(165deg, #011a14 0%, var(--dark-emerald) 30%, var(--deep-forest) 100%);
-            color: var(--soft-cream);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .login-container {
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 50px 40px;
-            width: 100%;
-            max-width: 480px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
-                        0 0 80px rgba(34, 197, 94, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .login-container::before {
-            content: '';
+        * { font-family: 'Poppins', sans-serif; }
+        .logo-font { font-family: 'Fredoka One', cursive; }
+        .bg-cream { background-color: #FFFBEB; }
+        .bg-yellow { background-color: #24fb93ff; }
+        .text-yellow { color: #24fb93ff; }
+        .border-yellow { border-color: #24fb93ff; }
+        
+        /* Floating Elements */
+        .floating-element {
             position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: conic-gradient(transparent, rgba(212, 175, 55, 0.1), transparent 30%);
-            animation: rotate 8s linear infinite;
+            z-index: 0;
+            opacity: 0.1;
         }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        
+        .chip-1 {
+            animation: floatChip1 15s ease-in-out infinite;
+            font-size: 80px;
+            color: rgba(4, 202, 27, 1);
         }
-
-        .login-content {
-            position: relative;
-            z-index: 2;
+        
+        .chip-2 {
+            animation: floatChip2 20s ease-in-out infinite;
+            font-size: 60px;
+            color: rgba(4, 202, 27, 1);
         }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 40px;
+        
+        .chip-3 {
+            animation: floatChip3 25s ease-in-out infinite;
+            font-size: 50px;
+            color: #24fb93ff;
         }
-
-        .logo h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--soft-cream), var(--gold-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
+        
+        @keyframes floatChip1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(40px, -30px) rotate(15deg); }
+            66% { transform: translate(-30px, 40px) rotate(-10deg); }
         }
-
-        .logo p {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            letter-spacing: 0.1em;
+        
+        @keyframes floatChip2 {
+            0%, 100% { transform: translate(0, 0) rotate(45deg); }
+            50% { transform: translate(-50px, 30px) rotate(75deg); }
         }
-
-        .form-group {
-            margin-bottom: 24px;
+        
+        @keyframes floatChip3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 50px) scale(1.3); }
         }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            opacity: 0.9;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+        
+        /* Glass Morphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            color: var(--soft-cream);
-            font-size: 1rem;
+        
+        /* Input Focus */
+        .input-focus:focus {
+            border-color: #24fb93ff;
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+        }
+        
+        /* Button Hover */
+        .btn-hover {
             transition: all 0.3s ease;
         }
-
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            outline: none;
-            border-color: var(--gold-accent);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-        }
-
-        .btn-login {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, var(--gold-accent), var(--fresh-leaf));
-            border: none;
-            border-radius: 12px;
-            color: var(--dark-emerald);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 8px;
-        }
-
-        .btn-login:hover {
+        
+        .btn-hover:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
         }
-
-        .error-message {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 24px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #fca5a5;
+        
+        /* Error Animation */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
-
-        .back-link {
-            text-align: center;
-            margin-top: 24px;
-        }
-
-        .back-link a {
-            color: var(--gold-accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .back-link a:hover {
-            opacity: 1;
-        }
-
-        @media (max-width: 480px) {
-            .login-container {
-                padding: 30px 20px;
-            }
-            
-            .logo h1 {
-                font-size: 2rem;
-            }
+        
+        .shake {
+            animation: shake 0.5s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <div class="login-container">
-        <div class="login-content">
-            <div class="logo">
-                <h1>DRIYUM</h1>
-                <p>Admin Portal</p>
+<body class="bg-cream text-gray-900 min-h-screen flex items-center justify-center p-4">
+    
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="floating-element chip-1" style="top: 10%; left: 5%;">🍟</div>
+        <div class="floating-element chip-2" style="top: 20%; right: 8%;">🌶️</div>
+        <div class="floating-element chip-3" style="bottom: 15%; left: 10%;">🧀</div>
+        <div class="floating-element chip-1" style="bottom: 25%; right: 15%;">🍿</div>
+        <div class="floating-element chip-2" style="top: 50%; left: 20%;">🥨</div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="relative z-10 w-full max-w-md">
+        <div class="glass-card rounded-3xl p-8">
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <div class="logo-font text-4xl text-yellow mb-2">DRIYUM</div>
+                <p class="text-gray-600">Admin Portal</p>
             </div>
             
+            <!-- Error Message -->
             <?php if ($error): ?>
-                <div class="error-message">
+                <div id="errorMessage" class="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg mb-6 text-center shake">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
                     <?php echo htmlspecialchars($error); ?>
                 </div>
             <?php endif; ?>
             
-            <form method="POST" action="">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" 
-                           id="username" 
-                           name="username" 
-                           required 
-                           placeholder="Enter admin username"
-                           value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>">
+            <!-- Login Form -->
+            <form method="POST" action="" id="loginForm">
+                <div class="space-y-6">
+                    <!-- Username Field -->
+                    <div>
+                        <label for="username" class="block text-gray-700 text-sm font-medium mb-2">
+                            <i class="fas fa-user mr-2 text-yellow"></i>Username
+                        </label>
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                required 
+                                placeholder="Enter admin username"
+                                value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"
+                                class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl input-focus focus:outline-none bg-white/50"
+                            >
+                            <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Field -->
+                    <div>
+                        <label for="password" class="block text-gray-700 text-sm font-medium mb-2">
+                            <i class="fas fa-lock mr-2 text-yellow"></i>Password
+                        </label>
+                        <div class="relative">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                required 
+                                placeholder="Enter password"
+                                class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl input-focus focus:outline-none bg-white/50"
+                            >
+                            <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <button type="button" id="togglePassword" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-yellow">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                            id="submitBtn"
+                            class="w-full bg-yellow hover:bg-yellow-600 text-gray-900 font-bold py-4 px-8 rounded-xl btn-hover transition-all duration-300">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Sign In
+                    </button>
                 </div>
-                
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" 
-                           id="password" 
-                           name="password" 
-                           required 
-                           placeholder="Enter password">
-                </div>
-                
-                <button type="submit" class="btn-login">
-                    Sign In
-                </button>
             </form>
             
-            <div class="back-link">
-                <a href="../index.php">← Back to Main Site</a>
+            <!-- Back Link -->
+            <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                <a href="../index.php" class="text-gray-600 hover:text-yellow transition flex items-center justify-center">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Main Site
+                </a>
+            </div>
+            
+            <!-- Security Notice -->
+            <div class="mt-6 p-4 bg-yellow/10 rounded-lg">
+                <div class="flex items-start">
+                    <i class="fas fa-shield-alt text-yellow mt-1 mr-3"></i>
+                    <p class="text-sm text-gray-600">
+                        This area is restricted to authorized personnel only. All activities are logged.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle password visibility
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+            
+            // Form submission enhancement
+            const loginForm = document.getElementById('loginForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            loginForm.addEventListener('submit', function() {
+                // Add loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Signing In...';
+                submitBtn.disabled = true;
+            });
+            
+            // Auto focus on username
+            document.getElementById('username').focus();
+            
+            // Remove error message after 5 seconds
+            const errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+                setTimeout(() => {
+                    errorMessage.style.opacity = '0';
+                    errorMessage.style.transition = 'opacity 0.5s ease';
+                    setTimeout(() => {
+                        errorMessage.style.display = 'none';
+                    }, 500);
+                }, 5000);
+            }
+            
+            // Add floating animation to chips on hover
+            const chips = document.querySelectorAll('.floating-element');
+            chips.forEach(chip => {
+                chip.addEventListener('mouseenter', function() {
+                    this.style.opacity = '0.3';
+                });
+                
+                chip.addEventListener('mouseleave', function() {
+                    this.style.opacity = '0.1';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
