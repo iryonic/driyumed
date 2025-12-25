@@ -209,17 +209,17 @@
                 <div class="flex flex-wrap items-center justify-center gap-6 mb-16">
                     <div class="flex items-center">
                         <i class="fas fa-heart text-green-600 text-2xl mr-2"></i>
-                        <span class="font-semibold">Healthy and Delicious</span>
+                        <span class="font-semibold">No Oil usage</span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                      <div class="flex items-center">
                         <i class="fa-solid fa-tree text-green-600 text-2xl mr-2"></i>
-                        <span class="font-semibold">100% Fruit </span>
+                        <span class="font-semibold">100% real Fruit </span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
                         <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
-                        <span class="font-semibold">100% Natural</span>
+                        <span class="font-semibold">preservative free</span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
@@ -508,7 +508,7 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
                         <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-hiking text-green text-xl"></i>
+                            <i class="fas fa-hiking text-green text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Trekkers & Adventurers</h4>
                         <p class="text-gray-600 text-sm">Lightweight, nutritious fuel for the trail</p>
@@ -516,7 +516,7 @@
                     
                     <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
                         <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-dumbbell text-green text-xl"></i>
+                            <i class="fas fa-dumbbell text-green text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Fitness Enthusiasts</h4>
                         <p class="text-gray-600 text-sm">Pre & post-workout natural energy</p>
@@ -524,7 +524,7 @@
                     
                     <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
                         <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-running text-green text-xl"></i>
+                            <i class="fas fa-running text-green text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Athletes</h4>
                         <p class="text-gray-600 text-sm">Clean nutrition for peak performance</p>
@@ -532,7 +532,7 @@
                     
                     <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-green/10">
                         <div class="w-14 h-14 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heart text-green md:text-xl"></i>
+                            <i class="fas fa-heart text-green md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Health-Conscious Families</h4>
                         <p class="text-gray-600 text-sm">Wholesome snacks everyone can enjoy</p>
@@ -547,7 +547,8 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
                 <h3 class="logo-font text-2xl text-beiges mb-4 flex justify-center items-center gap-2"><img src="singlelogo.png" alt="DRIYUM Logo" width="100"></h3>
-                <p class="text-gray-400 mb-6 text-lg">Your new healthy habit.</p>
+                <p class="text-gray-400  text-lg">Your new healthy habit.</p>
+                <a href="mailto:contact@driyum.com" class="inline-block text-gray-400 mb-6 text-lg">contact@driyum.com</a>
                 <div class="flex justify-center space-x-4">
                     <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-green-600 transition">
                         <i class="fab fa-instagram"></i>
