@@ -209,23 +209,20 @@
                 <div class="flex flex-wrap items-center justify-center gap-6 mb-16">
                     <div class="flex items-center">
                         <i class="fas fa-heart text-green-600 text-2xl mr-2"></i>
-                        <span class="font-semibold">No Oil usage</span>
+                        <span class="font-semibold">100% real Fruit </span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                      <div class="flex items-center">
                         <i class="fa-solid fa-tree text-green-600 text-2xl mr-2"></i>
-                        <span class="font-semibold">100% real Fruit </span>
+                        <span class="font-semibold">No Oil usage</span>
                     </div>
                     <div class="w-2 h-2 bg-green rounded-full"></div>
                     <div class="flex items-center">
                         <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
                         <span class="font-semibold">preservative free</span>
                     </div>
-                    <div class="w-2 h-2 bg-green rounded-full"></div>
-                    <div class="flex items-center">
-                        <i class="fas fa-rupee-sign text-green-700 text-2xl mr-2"></i>
-                        <span class="font-semibold">Affordable Health</span>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -547,8 +544,8 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
                 <h3 class="logo-font text-2xl text-beiges mb-4 flex justify-center items-center gap-2"><img src="singlelogo.png" alt="DRIYUM Logo" width="100"></h3>
-                <p class="text-gray-400  text-lg">Your new healthy habit.</p>
-                <a href="mailto:contact@driyum.com" class="inline-block text-gray-400 mb-6 text-lg">contact@driyum.com</a>
+                <p class="text-gray-400 mb-6 text-lg">Your new healthy habit.</p>
+               
                 <div class="flex justify-center space-x-4">
                     <a href="https://www.instagram.com/driyumfoods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green hover:text-green-600 transition">
                         <i class="fab fa-instagram"></i>
@@ -560,6 +557,7 @@
                         <i class="fa-regular fa-envelope"></i>
                     </a>
                 </div>
+                 <a href="mailto:contact@driyum.com" class="inline-block text-gray-400 mt-4 text-sm">contact@driyum.com</a>
             </div>
             
             <div class="border-t border-gray-800 pt-8">
